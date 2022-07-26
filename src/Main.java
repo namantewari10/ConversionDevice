@@ -5,8 +5,15 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the value in feet: ");
+
         int valueInFeet = Integer.parseInt(br.readLine().trim());
-        System.out.println("valueInInches:" + valueInFeet*12);
+        Convertor convertor = new Convertor();
+        convertor.convertFeetToInches(valueInFeet);
+        convertor.printValueInInches();
+
+        int valueInYard = Integer.parseInt(br.readLine().trim());
+        Convertor convertorNew = new Convertor();
+        convertorNew.convertYardToFeet(valueInYard);
+        convertorNew.printValueInFeet();
     }
 }
